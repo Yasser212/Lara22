@@ -17,5 +17,11 @@ use App\Models\Listing;
 // All listings
 Route::get('/', [ListingController::class, 'index']);
 
+// Show Create Form
+Route::get('/listings/create', [ListingController::class, 'create']);
+
+// store - Store new listing
+Route::post('/listings', [ListingController::class, 'store']);
+
 // Check if id vaild using Route model binding 
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
