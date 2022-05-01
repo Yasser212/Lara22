@@ -4,17 +4,32 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Listing;
 
 
-// All Listings
+// All listings
 Route::get('/', function(){
-    return view ('Listings', [
-        'heading' => 'Latest Listings',
-        'Listings' => Listing::all()
+    return view ('listings', [
+        'heading' => 'Latest listings',
+        'listings' => Listing::all()
     ]);
 });
 
-// Single Listing
-Route::get('/Listings/{id}', function($id){
-    return view ('Listing', [
-        'Listing' => Listing::find($id)
+// Single listing
+// Check if id vaild ist using ifelse and abort 404
+// Route::get('/listings/{id}', function($id){
+//     $listing = listing::find($id);
+
+//     if($listing){
+//         return view ('listing', [
+//             'listing' => listing::find($id)
+//         ]);
+//     }
+//     else{
+//         abort('404');
+//     }
+// });
+
+// Check if id vaild using Route model binding 
+Route::get('/listings/{listing}', function(Listing $listing){
+    return view ('listing', [
+        'listing' => $listing
     ]);
 });
