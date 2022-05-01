@@ -1,35 +1,21 @@
 <?php
 
+use App\Http\Controllers\ListingController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Listing;
 
+// Common Resource Routes:
+// index - Show all listings
+// show - Show single listing
+// create - Show form to create new listing
+// store - Store new listing
+// edit - Show form to edit listing
+// update - Update listing
+// destroy - Delete listing
+
 
 // All listings
-Route::get('/', function(){
-    return view ('listings', [
-        'heading' => 'Latest listings',
-        'listings' => Listing::all()
-    ]);
-});
-
-// Single listing
-// Check if id vaild ist using ifelse and abort 404
-// Route::get('/listings/{id}', function($id){
-//     $listing = listing::find($id);
-
-//     if($listing){
-//         return view ('listing', [
-//             'listing' => listing::find($id)
-//         ]);
-//     }
-//     else{
-//         abort('404');
-//     }
-// });
+Route::get('/', [ListingController::class, 'index']);
 
 // Check if id vaild using Route model binding 
-Route::get('/listings/{listing}', function(Listing $listing){
-    return view ('listing', [
-        'listing' => $listing
-    ]);
-});
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
