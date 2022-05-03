@@ -23,5 +23,14 @@ Route::get('/listings/create', [ListingController::class, 'create']);
 // store - Store new listing
 Route::post('/listings', [ListingController::class, 'store']);
 
+// Show form to edit listing
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
+
+//Update Listing
+Route::put('/listings/{listing}', [ListingController::class, 'update']);
+
+//Delete Listing
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
+
 // Check if id vaild using Route model binding 
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
