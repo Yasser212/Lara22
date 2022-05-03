@@ -8,6 +8,8 @@
     <title>Lara22</title>
     <link rel="icon" href="images/favicon.ico" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
 <body class="mb-48">

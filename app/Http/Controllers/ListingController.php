@@ -11,7 +11,7 @@ class ListingController extends Controller
     //show all listings
      public function index(){
         return view ('listings.index', [
-            'listings' => Listing::latest()->filter(request(['tag', 'search']))->get()
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(8) //we can also use simplepaginate instade of paginate to show next/prev instade of numbers
         ]);
      }
 
@@ -38,6 +38,10 @@ class ListingController extends Controller
              'email' => ['required', 'email'],
              'tags' => 'required'
          ]);
+
+         if($request->hasFile('logo')) {
+            $formFields['logo'] = $request->file('logo')->store('logos', 'public');
+        }
 
          Listing::create($formFields);
 
