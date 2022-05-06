@@ -1,5 +1,6 @@
 <x-layout>
-    <x-card class="p-10 max-w-lg mx-auto mt-24">
+    <x-card
+        class="p-10 max-w-lg mx-auto mt-24 antialiased bg-gradient-to-r from-gray-500 selection:via-purple-100 to-slate-600">
         <header class="text-center">
             <h2 class="text-2xl font-bold uppercase mb-1">
                 Create a Gig
@@ -93,7 +94,7 @@
                     Create Gig
                 </button>
 
-                <a href="/" class="text-black ml-4"> Back </a>
+                <a href="/" class="text-white ml-4"> Back </a>
             </div>
         </form>
     </x-card>
