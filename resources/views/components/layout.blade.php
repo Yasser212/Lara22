@@ -15,7 +15,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
-<body class="mb-48">
+<body class="mb-48 antialiased bg-gradient-to-r from-gray-700 selection:via-purple-100 to-slate-900 text-white">
     <nav class="flex justify-between items-center">
         <a href="/"><img class="w-24 border-black border-b-4" src="{{ asset('images/logo.png') }}" alt=""
                 class="logo" /></a>
