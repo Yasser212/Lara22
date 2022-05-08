@@ -19,6 +19,22 @@
     <nav class="flex justify-between items-center">
         <a href="/"><img class="w-24 border-black border-b-4" src="{{ asset('images/logo.png') }}" alt=""
                 class="logo" /></a>
+        <form action="/" class="w-1/2 mx-auto">
+            <div class="relative border-2 border-gray-500 hover:border-gray-200 m-4 rounded-lg">
+                <div class="absolute top-4 left-3">
+                    <i class="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i>
+                </div>
+                <input type="text" name="search"
+                    class="h-14 w-full pl-10 pr-20 rounded-lg z-0 focus:shadow focus:outline-none text-white bg-slate-800"
+                    placeholder="Search Laravel Gigs..." />
+                <div class="absolute top-2 right-2">
+                    <button type="submit" class="h-10 w-20 text-white rounded-lg bg-red-500 hover:bg-red-600">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </form>
+
         <ul class="flex space-x-6 mr-6 text-lg">
             <li>
                 <a href="register.html" class="hover:text-laravel"><i class="fa-solid fa-user-plus"></i> Register</a>
@@ -32,7 +48,6 @@
 
     <main>
         {{ $slot }}
-
     </main>
     <footer
         class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center bg-amber800">

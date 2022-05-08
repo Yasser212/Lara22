@@ -1,4 +1,4 @@
-<form action="/" class="w-1/2 mx-auto">
+{{-- <form action="/" class="w-1/2 mx-auto">
     <div class="relative border-2 border-gray-500 hover:border-gray-200 m-4 rounded-lg">
         <div class="absolute top-4 left-3">
             <i class="fa fa-search text-gray-400 z-20 hover:text-gray-500"></i>
@@ -12,4 +12,4 @@
             </button>
         </div>
     </div>
-</form>
+</form> --}}
