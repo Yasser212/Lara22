@@ -14,6 +14,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="//unpkg.com/alpinejs" defer></script>
 </head>
+<style>
+    * {
+        color: black
+    }
+
+</style>
 
 <body class="mb-48 antialiased bg-gradient-to-r from-gray-700 selection:via-purple-100 to-slate-900 text-white">
     <nav class="flex justify-between items-center">
